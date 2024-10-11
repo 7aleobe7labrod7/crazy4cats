@@ -55,3 +55,17 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to comments_path, status: :see_other }
+      format.json { head :no_content }  # Para manejar la respuesta JSON
+    end
+  end
+
+  private
+
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:content, :post_id)
+  end
+end
