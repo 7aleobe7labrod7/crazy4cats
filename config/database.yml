@@ -26,3 +26,4 @@ production:
   database: crazy4cats_production
   username: postgres
   password: <%= ENV["CRAZY4CATS_DATABASE_PASSWORD"] %>
+  host: <%= ENV["CRAZY4CATS_DATABASE_HOST"] %>

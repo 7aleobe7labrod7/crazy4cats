@@ -54,4 +54,4 @@ class CommentsController < ApplicationController
     @comment.destroy!
 
     respond_to do |format|
-      format.html { redirect_to comments_path, status: :see_ot
+      format.html { redirect_to comments_path, status: :see_other }
